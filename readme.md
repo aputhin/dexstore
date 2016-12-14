@@ -1,4 +1,6 @@
-## About DexStore
+This is a work in progress.
+
+<!-- ## About DexStore
 
 Para resolver o desafio, utilizei o framework Laravel para o back-end.
 
@@ -8,4 +10,4 @@ Para resolver o desafio, utilizei o framework Laravel para o back-end.
 
 ## Front-end
 
-Utilizei um layout simples do bootstrap, aproveitando a capacidade dos blades do Laravel.
+Utilizei um layout simples do bootstrap, aproveitando a capacidade dos blades do Laravel. -->
