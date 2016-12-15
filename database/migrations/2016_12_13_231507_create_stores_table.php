@@ -18,8 +18,8 @@ class CreateStoresTable extends Migration
             $table->string('name');
             $table->string('logo_link')->nullable();
             $table->string('description')->nullable();
-            $table->date('opens');
-            $table->date('closes');
+            $table->time('opens');
+            $table->time('closes');
         });
     }
 
