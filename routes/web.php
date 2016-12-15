@@ -16,5 +16,8 @@ Route::get('/', function () {
 });
 
 Route::get('/list', 'ViewController@list');
+Route::get('/add', function() {
+	return view('store.add');
+});
 Route::get('/get/{id}', 'ViewController@get')->where('id', '[0-9]+');
 Route::get('/rm/{id}', 'ViewController@rm')->where('id', '[0-9]+');
