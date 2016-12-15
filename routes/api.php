@@ -13,6 +13,9 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/user', function (Request $request) {
-    return $request->user();
-})->middleware('auth:api');
+Route::group(['prefix' => 'stores'], function () {
+	Route::get('list', 'StoreController@list');
+	Route::get('add', 'StoreController@add');
+	Route::get('edit', 'StoreController@edit');
+	Route::get('remove', 'StoreController@remove');
+});

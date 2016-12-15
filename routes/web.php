@@ -16,10 +16,5 @@ Route::get('/', function () {
 });
 
 Route::get('/list', 'ViewController@list');
-
-Route::group(['prefix' => 'stores'], function () {
-	Route::get('list', 'StoreController@list');
-	Route::get('add', 'StoreController@add');
-	Route::get('edit', 'StoreController@edit');
-	Route::get('remove', 'StoreController@remove');
-});
+Route::get('/get/{id}', 'ViewController@get')->where('id', '[0-9]+');
+Route::get('/rm/{id}', 'ViewController@rm')->where('id', '[0-9]+');

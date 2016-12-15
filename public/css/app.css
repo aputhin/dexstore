@@ -7710,4 +7710,9 @@ body {
   text-align: center;
 }
 
+.list-logo {
+  max-width: 30px;
+  max-height: 15px;
+}
+
 /*# sourceMappingURL=app.css.map */

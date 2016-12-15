@@ -26,8 +26,8 @@ class StoreController extends BaseController
     		return Store::all();
     	}
 
-    	return Store::where('opens', '>=', Carbon::now())
-    		->where('closes', '<=', Carbon::now())
+    	return Store::where('opens', '<=', Carbon::now()->format('H:i'))
+    		->where('closes', '>=', Carbon::now()->format('H:i'))
     		->get();
     }
 
@@ -72,17 +72,30 @@ class StoreController extends BaseController
     /**
      * Removes a store from the database by it's id
      *
-	 * @param Request $request The request with the store id
+     * @param Int $id The id of the store
      * 
      * @author arthur.puthin
      * @since 2016-12-13
      */
-    public function remove(Request $request) 
+    public function remove(int $id) 
     {
-    	Store::destroy($request->get('id'));
-
-    	return Store::all()->toJson();
+    	Store::destroy($id);
     }
+
+    /**
+     * Fetches a store based on its id
+     *
+     * @param Int $id The id of the store
+     * @return Store corresponding to that id
+     * 
+     * @author arthur.puthin
+     * @since 2016-12-14
+     */
+    public function get(int $id) 
+    {
+        return Store::find($id);
+    }
+
 
     /**
      * Parses the store attributes for adding or editing

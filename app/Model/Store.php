@@ -12,11 +12,4 @@ class Store extends Model
      * @var bool
      */
     public $timestamps = false;
-
-    /**
-     * The storage format of the model's date columns.
-     *
-     * @var string
-     */
-    protected $dateFormat = 'H:i';
 }

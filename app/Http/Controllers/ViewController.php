@@ -12,10 +12,10 @@ class ViewController extends BaseController
     
     /**
      * Lists the stores on the database based on the user type
-     *	(admins can see the whole list, users only the open stores)
+     *  (admins can see the whole list, users only the open stores)
      *
-	 * @param Request $request The request with the new store params
-	 * @return JSON object with the list of stores
+     * @param Request $request The request with admin key
+     * @return View with the list of stores (depending on the kind of user)
      * 
      * @author arthur.puthin
      * @since 2016-12-13
@@ -24,11 +24,46 @@ class ViewController extends BaseController
     {
         $control = new StoreController;
         $stores = $control->list($request);
-        dd($stores);
 
-    	return view('store.list')
+        return view('store.list')
             ->with('list', $stores)
             ->with('admin', (bool) $request->get('admin'));
+    }
+
+    /**
+     * Returns a single store for editing
+     *
+     * @param Int $id the ID of the store to be edited
+     * @return View with the editable store
+     * 
+     * @author arthur.puthin
+     * @since 2016-12-14
+     */
+    public function get(int $id) 
+    {
+        $control = new StoreController;
+        $store = $control->get($id);
+
+        return view('store.edit')
+            ->with('store', $store);
+    }
+
+
+    /**
+     * Returns a single store for editing
+     *
+     * @param Int $id the ID of the store to be edited
+     * @return View with the editable store
+     * 
+     * @author arthur.puthin
+     * @since 2016-12-14
+     */
+    public function rm(int $id) 
+    {
+        $control = new StoreController;
+        $store = $control->remove($id);
+
+        return '<script>alert(\'Loja removida!\'); window.location.replace(\'/list?admin=1\');</script>';
     }
 
 }
