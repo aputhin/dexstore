@@ -23,9 +23,13 @@ $(document).ready( function() {
 	        methods:  methods,
 
 	        created: function() {
-	        	console.log($('#storeid').val());
 	        	if (!!$('#storeid').val()) {
 	        		this.form.id = $('#storeid').val();
+	        		this.form.name = $('#storename').val();
+	        		this.form.desc = $('#storedesc').val();
+	        		this.form.logo = $('#storelogo').val();
+	        		this.form.opens = $('#storeopens').val();
+	        		this.form.closes = $('#storecloses').val();
 	        	}
 	        },
 	    });
