@@ -12,7 +12,6 @@ $(document).ready( function() {
 	if ($('#store-form').length) {
 	    let data     = require('./modules/store.data'),
 	        methods  = require('./modules/store.methods'),
-	        created  = require('./modules/store.created'),
 	        computed = require('./modules/store.computed');
 
 	    // Cria uma instância do Vue 
@@ -22,7 +21,7 @@ $(document).ready( function() {
 	        data:     data,
 	        computed: computed,
 	        methods:  methods,
-	        
+
 	        ready: function() {
 	        	if (!!$('#storeid').val()) {
 	        		this.form.id = $('#storeid').val();
