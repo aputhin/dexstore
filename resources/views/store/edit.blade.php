@@ -7,8 +7,8 @@
         </div>
         <input id="storeid" type="hidden" value="{{ $store->id }}" />
         <input id="storename" type="hidden" value="{{ $store->name }}" />
-        <input id="storedesc" type="hidden" value="{{ $store->desc }}" />
-        <input id="storelogo" type="hidden" value="{{ $store->logo }}" />
+        <input id="storedesc" type="hidden" value="{{ $store->description }}" />
+        <input id="storelogo" type="hidden" value="{{ $store->logo_link }}" />
         <input id="storeopens" type="hidden" value="{{ $store->opens }}" />
         <input id="storecloses" type="hidden" value="{{ $store->closes }}" />
         <div class="form-group">
