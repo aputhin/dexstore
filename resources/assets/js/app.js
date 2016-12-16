@@ -18,8 +18,9 @@ $(document).ready( function() {
 	    const storeVue = new Vue({
 	        el: '#store-form',
 
-	        data:    data,
-	        methods: methods,
+	        data:     data,
+	        computed: computed,
+	        methods:  methods,
 
 	    });
 	}
