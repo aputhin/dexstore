@@ -61,7 +61,7 @@ class ViewController extends BaseController
         $control = new StoreController;
         $store = $control->remove($id);
 
-        return '<script>alert(\'Loja removida!\'); window.location.replace(\'/list?admin=1\');</script>';
+        return view('store.removed');
     }
 
 }
