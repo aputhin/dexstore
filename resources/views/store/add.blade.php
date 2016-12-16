@@ -10,7 +10,7 @@
         		<label for="name">Nome</label>
         	</div>
         	<div class="col-sm-5">
-            	<input id="name" type="text" class="form-control" v-model="name"">
+            	<input id="name" type="text" class="form-control" v-model="form.name">
             </div>
         </div>
         <div class="form-group">
@@ -18,7 +18,7 @@
         		<label for="desc">Descrição</label>
         	</div>
         	<div class="col-sm-5">
-            	<input id="desc" type="text" class="form-control" v-model="desc"">
+            	<input id="desc" type="text" class="form-control" v-model="form.desc">
             </div>
         </div>
         <div class="form-group">
@@ -26,7 +26,7 @@
         		<label for="logo">Link para o logo</label>
         	</div>
         	<div class="col-sm-5">
-            	<input id="logo" type="text" class="form-control" v-model="logo"">
+            	<input id="logo" type="text" class="form-control" v-model="form.logo">
             </div>
         </div>
         <div class="form-group">
@@ -34,13 +34,20 @@
         		<label for="opens">Abre às:</label>
         	</div>
         	<div class="col-sm-2">
-            	<input id="opens" type="text" class="form-control" v-model="opens"">
+            	<input id="opens" type="text" class="form-control time" v-model="form.opens">
             </div>
         	<div class="col-sm-1">
         		<label for="closes">Fecha às:</label>
         	</div>
         	<div class="col-sm-2">
-            	<input id="closes" type="text" class="form-control" v-model="nome"">
+            	<input id="closes" type="text" class="form-control time" v-model="form.closes">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-6 text-right">
+                <button class="btn btn-default" v-on:click="newStore()" title="Adicionar">
+                    <span class="glyphicon glyphicon-plus text-success"> Adicionar</span>
+                </button>
             </div>
         </div>
     </div>

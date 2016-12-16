@@ -15,7 +15,7 @@ use Illuminate\Http\Request;
 
 Route::group(['prefix' => 'stores'], function () {
 	Route::get('list', 'StoreController@list');
-	Route::get('add', 'StoreController@add');
-	Route::get('edit', 'StoreController@edit');
-	Route::get('remove', 'StoreController@remove');
+	Route::post('add', 'StoreController@add');
+	Route::post('edit', 'StoreController@edit');
+	Route::post('remove', 'StoreController@remove');
 });

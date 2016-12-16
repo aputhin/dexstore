@@ -108,11 +108,11 @@ class StoreController extends BaseController
      */
     private function parseAttributes(Store &$store, Request $request) 
     {
-    	$store->name = $request->get('name');
-    	$store->logo_link = $request->get('link');
-    	$store->description = $request->get('description');
-    	$store->opens = Carbon::now()->addHours(-2); #TODO
-    	$store->closes = Carbon::now()->addHours(2); #TODO
+    	$store->name           = $request->get('name');
+    	$store->logo_link      = $request->get('logo');
+    	$store->description    = $request->get('desc');
+    	$store->opens          = $request->get('opens');
+    	$store->closes         = $request->get('closes');
     }
 
 }

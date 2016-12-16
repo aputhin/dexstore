@@ -12,7 +12,7 @@ class ViewController extends BaseController
     
     /**
      * Lists the stores on the database based on the user type
-     *  (admins can see the whole list, users only the open stores)
+     *  (admins manage the whole list, users only read the open stores)
      *
      * @param Request $request The request with admin key
      * @return View with the list of stores (depending on the kind of user)
@@ -44,16 +44,14 @@ class ViewController extends BaseController
         $control = new StoreController;
         $store = $control->get($id);
 
-        return view('store.edit')
-            ->with('store', $store);
+        return view('store.edit')->with('store', $store);
     }
 
-
     /**
-     * Returns a single store for editing
+     * Removes a store by its' ID.
      *
-     * @param Int $id the ID of the store to be edited
-     * @return View with the editable store
+     * @param Int $id the ID of the store to be removed
+     * @return String script with confirmation and redir
      * 
      * @author arthur.puthin
      * @since 2016-12-14

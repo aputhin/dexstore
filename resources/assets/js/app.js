@@ -1,20 +1,30 @@
 
-/**
- * First we will load all of this project's JavaScript dependencies which
- * include Vue and Vue Resource. This gives a great starting point for
- * building robust, powerful web applications using Vue and Laravel.
- */
+// jQuery & Bootstrap init
+var $ = window.$ = window.jQuery = require('jquery');
+var jMask = require('jquery-mask-plugin');
+var Bootstrap   = require('bootstrap-sass');
 
-require('./bootstrap');
+// vue.js init
+var Vue          = require('vue');
+var VueResource  = require('vue-resource');
+Vue.use(VueResource);
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
+$(document).ready( function() {
 
-Vue.component('example', require('./components/Example.vue'));
+	$('.time').mask('00:00');
 
-const app = new Vue({
-    el: '#app'
+	if ($('#store-form').length) {
+	    let data    = require('./modules/store.data'),
+	        methods = require('./modules/store.methods');
+
+	    // Cria uma instância do Vue 
+	    const storeVue = new Vue({
+	        el: '#store-form',
+
+	        data:    data,
+	        methods: methods,
+
+	    });
+	}
 });
+
