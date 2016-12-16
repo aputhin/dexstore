@@ -22,7 +22,7 @@ $(document).ready( function() {
 	        data:     data,
 	        computed: computed,
 	        methods:  methods,
-	        created:  created,
+	        ready:    created.do,
 	    });
 	}
 });
