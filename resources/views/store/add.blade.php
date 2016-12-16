@@ -34,18 +34,18 @@
         		<label for="opens">Abre às:</label>
         	</div>
         	<div class="col-sm-2">
-            	<input id="opens" type="text" class="form-control time" v-model="form.opens">
+            	<input id="opens" type="time" class="form-control" v-model="form.opens">
             </div>
         	<div class="col-sm-1">
         		<label for="closes">Fecha às:</label>
         	</div>
         	<div class="col-sm-2">
-            	<input id="closes" type="text" class="form-control time" v-model="form.closes">
+            	<input id="closes" type="time" class="form-control" v-model="form.closes">
             </div>
         </div>
         <div class="form-group">
             <div class="col-sm-6 text-right">
-                <button class="btn btn-default" v-on:click="save" title="Adicionar">
+                <button type="submit" class="btn btn-default" v-on:click="save" title="Adicionar">
                     <span class="glyphicon glyphicon-plus text-success"> Adicionar</span>
                 </button>
             </div>
