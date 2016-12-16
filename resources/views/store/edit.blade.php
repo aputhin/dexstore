@@ -13,6 +13,14 @@
         <input id="storecloses" type="hidden" value="{{ $store->closes }}" />
         <div class="form-group">
             <div class="col-sm-1">
+                <label for="id">ID</label>
+            </div>
+            <div class="col-sm-5">
+                <input id="id" type="text" class="form-control" v-model="form.id">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-1">
                 <label for="name">Nome</label>
             </div>
             <div class="col-sm-5">
