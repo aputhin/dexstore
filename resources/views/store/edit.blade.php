@@ -5,7 +5,7 @@
         <div class="page-header">
             <h3>Editar Loja</h3>
         </div>
-        <input type="hidden" value="{{ $store->id }}" />
+        <input id="storeid" type="hidden" value="{{ $store->id }}" />
         <div class="form-group">
         	<div class="col-sm-1">
         		<label for="name">Nome</label>
