@@ -1,7 +1,7 @@
 @extends('layout.master')
 
 @section('content')
-	<div class="form-horizontal" id="store-form">
+	<div class="form-horizontal" id="store-form" v-cloak>
         <div class="page-header">
             <h3>Editar Loja</h3>
         </div>
