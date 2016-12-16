@@ -22,7 +22,12 @@ $(document).ready( function() {
 	        data:     data,
 	        computed: computed,
 	        methods:  methods,
-	        ready:    created.do,
+	        
+	        ready: function() {
+	        	if (!!$('#storeid').val()) {
+	        		this.form.id = $('#storeid').val();
+	        	}
+	        },
 	    });
 	}
 });
