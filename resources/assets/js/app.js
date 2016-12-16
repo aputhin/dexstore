@@ -23,6 +23,7 @@ $(document).ready( function() {
 	        methods:  methods,
 
 	        ready: function() {
+	        	console.log($('#storeid').val();
 	        	if (!!$('#storeid').val()) {
 	        		this.form.id = $('#storeid').val();
 	        	}
