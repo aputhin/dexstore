@@ -4,6 +4,6 @@ module.exports = {
 	 *	name, opens at and closes fields are filled.
 	 */
 	valid: function() {
-		return this.store.name.length > 0 && this.store.opens.length > 0 && this.store.closes.length > 0;
+		return this.form.name.length > 0 && this.form.opens.length > 0 && this.form.closes.length > 0;
 	},
 }
