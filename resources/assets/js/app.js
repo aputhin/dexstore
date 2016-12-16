@@ -12,7 +12,8 @@ $(document).ready( function() {
 	if ($('#store-form').length) {
 	    let data     = require('./modules/store.data'),
 	        methods  = require('./modules/store.methods'),
-	        computed = require('./modules/store.computed');
+	        computed = require('./modules/store.computed'),
+	        created  = require('./modules/store.created');
 
 	    // Cria uma instância do Vue 
 	    const storeVue = new Vue({
@@ -22,16 +23,7 @@ $(document).ready( function() {
 	        computed: computed,
 	        methods:  methods,
 
-	        created: function() {
-	        	if (!!$('#storeid').val()) {
-	        		this.form.id = $('#storeid').val();
-	        		this.form.name = $('#storename').val();
-	        		this.form.desc = $('#storedesc').val();
-	        		this.form.logo = $('#storelogo').val();
-	        		this.form.opens = $('#storeopens').val();
-	        		this.form.closes = $('#storecloses').val();
-	        	}
-	        },
+	        created: created.do,
 	    });
 	}
 });

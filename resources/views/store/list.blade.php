@@ -31,7 +31,7 @@
 
 	@if ($admin)
 		<div class="text-center">
-			<a href="{{ url('add') }}"><button type="button" title="Adicionar" class="btn btn-success"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button></a>
+			<a href="{{ url('add') }}"><button type="button" title="Novo" class="btn btn-success"><span class="glyphicon glyphicon-plus" aria-hidden="true"> Novo</span></button></a>
 		</div>
 	@endif
 @endsection
