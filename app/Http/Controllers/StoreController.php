@@ -34,39 +34,21 @@ class StoreController extends BaseController
     /**
      * Inserts a store in the database
      *
-	 * @param Request $request The request with the new store params
+	 * @param Request $request The request with the store params
      * 
      * @author arthur.puthin
      * @since 2016-12-13
      */
-    public function add(Request $request) 
+    public function save(Request $request) 
     {
     	$store = new Store();
+        if (strlen($request->get('id')) > 0) {
+            $store = Store::find($request->get('id'));
+        }
 
     	$this->parseAttributes($store, $request);
 
     	$store->save();
-
-    	return Store::all()->toJson();
-    }
-
-    /**
-     * Updates a store's attributes
-     *
-	 * @param Request $request The request with the store id and params
-     * 
-     * @author arthur.puthin
-     * @since 2016-12-13
-     */
-    public function edit(Request $request)
-    {
-    	$store = Store::find($request->get('id'));
-
-    	$this->parseAttributes($store, $request);
-
-    	$store->save();
-
-    	return Store::all()->toJson();
     }
 
     /**
