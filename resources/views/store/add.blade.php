@@ -45,7 +45,7 @@
         </div>
         <div class="form-group">
             <div class="col-sm-6 text-right">
-                <button class="btn btn-default" v-on:click="newStore()" title="Adicionar">
+                <button class="btn btn-default" v-on:click="save" title="Adicionar">
                     <span class="glyphicon glyphicon-plus text-success"> Adicionar</span>
                 </button>
             </div>
