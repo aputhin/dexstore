@@ -45,7 +45,7 @@
         </div>
         <div class="form-group">
             <div class="col-sm-6 text-right">
-                <button type="submit" class="btn btn-default" v-on:click="save" title="Adicionar">
+                <button type="submit" class="btn btn-default" v-on:click="save" title="Adicionar" :disabled="!valid">
                     <span class="glyphicon glyphicon-plus text-success"> Adicionar</span>
                 </button>
             </div>
