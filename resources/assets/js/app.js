@@ -22,7 +22,7 @@ $(document).ready( function() {
 	        computed: computed,
 	        methods:  methods,
 
-	        ready: function() {
+	        created: function() {
 	        	console.log($('#storeid').val());
 	        	if (!!$('#storeid').val()) {
 	        		this.form.id = $('#storeid').val();
